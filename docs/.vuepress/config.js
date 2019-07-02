@@ -2,6 +2,9 @@ module.exports = {
   title: 'wuweiwei\'s blog',
   description: 'my blog',
   port: '3000',
+  head: [
+    ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `/icons/favicon.ico` }]
+ ],
   base: '/',
   themeConfig: {
     nav: [
@@ -25,18 +28,11 @@ module.exports = {
       },
       { text: '工作笔记', link: '/workNotes/' },
       { text: '前端可视化', link: '/web/' },
+      { text: '面试', link: '/interview/' },
       { text: '关于', link: '/about/' },
       { text: 'Github', link: 'https://github.com' },
     ],
-    sidebar: 'auto',
     lastUpdated: 'Last Updated', // string | boolean
-    // sidebar: {
-    //   '/': [
-    //     "/", //指的是根目录的md文件 也就是 README.md 里面的内容
-    //     "apiword",
-    //     "api",
-    //     "error"
-    //   ]
-    // },
-  }
+    sidebar:'auto'
+  } 
 }

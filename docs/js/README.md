@@ -1,1 +1,2 @@
-javascript
+# js基础知识
+## 数据类型
