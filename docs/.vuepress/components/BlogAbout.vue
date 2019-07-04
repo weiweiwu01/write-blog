@@ -1,6 +1,7 @@
 
 <template>
-    <div>1111111111111111
+    <div>
+        vuepress搭建个人博客
     </div>
 </template>
 
