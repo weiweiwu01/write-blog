@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "bash deploy.sh",
+    "deploy": "bash dep.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
