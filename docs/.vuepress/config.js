@@ -32,6 +32,7 @@ module.exports = {
       { text: '关于', link: '/about/' },
       { text: 'Github', link: 'https://github.com' },
     ],
+    sidebarDepth: 4, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
     lastUpdated: 'Last Updated', // string | boolean
     sidebar:'auto'
   } 

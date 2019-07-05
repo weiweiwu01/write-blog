@@ -1,6 +1,8 @@
 ---
 home: true
-# heroImage: /logo.png
+heroImage: /logo.jpg
+heroText: wuweiwei's blog
+tagline:  wuweiwei个人博客
 actionText: 介绍 →
 actionLink: /about/
 features:
