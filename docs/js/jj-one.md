@@ -51,7 +51,7 @@ function pow(x){
     return x * x;
 }
 const arr1 = [1,2,3,4];
-const arr2 = arr1.map(item => pow;
+const arr2 = arr1.map( pow );
 ```
 我们调用Array的<font color='#ffa200'>map()</font>方法，传入我们自己的函数，就得到了一个新的Array作为结果。
 ::: warning
