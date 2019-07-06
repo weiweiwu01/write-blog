@@ -2,8 +2,8 @@
 
 ### Highter-order function 高阶函数定义
 在JavaScript中，函数是一种特殊类型的对象--Function objects,是指至少满足下列条件之一的函数:
-+ 函数可以作为参数被传递
-+ 函数可以作为返回值输出  
++ <font color='#ffa200'>函数可以作为参数被传递</font>
++ <font color='#ffa200'>函数可以作为返回值输出</font>  
 简单来说，高阶函数是一个接受函数作为参数传递或者函数作为返回值输出的函数。  
 举个栗子，一个简单的高阶函数：  
 ```
@@ -11,7 +11,7 @@ function add(x,y,f){
     return f(x)+f(y)
 }
 ```
-当我们调用add(-5,6,Math,abs)时，参数x,y和f分别接受-5,6和函数Math.abs，根据函数定义，我们可以推导计算过程为：
+当我们调用 <font color='#ffa200'>add(-5,6,Math,abs)</font>时，参数x,y和f分别接受 <font color='#ffa200'>-5,6</font>和函数 <font color='#ffa200'>Math.abs</font>，根据函数定义，我们可以推导计算过程为：
 ```
 x = -5;
 y = 6;
@@ -20,7 +20,7 @@ f(x) + f(y) ==> Math.abs(-5)  +Math.abs(6) ==> 11;
 return 11;
 ```
  ### 函数作为参数传递
- JavaScript语言中内置了一些高阶函数，比如<font color='#ffa200'>Array.prototype.map,Array.prototype.filter和Array.prototype.reduce</font>，它们接受一个函数作为参数，并应用这个函数到列表的每一个元素。
+ JavaScript语言中内置了一些高阶函数，比如 <font color='#ffa200'>Array.prototype.map,Array.prototype.filter和Array.prototype.reduce</font>，它们接受一个函数作为参数，并应用这个函数到列表的每一个元素。
  #### Array.prototype.map  
  map()方法会创建一个**新数组**，其结果是该数组中的每个元素都调用一个**提供的函数**后返回的结果，**原始数组不会改变**。传递给map的回调函数（callback）接受三个参数，分别是currentValue、index(可选)、array（可选），除了callback之外还可以接受this值（可选），用于执行callback函数时使用的this值。  
 举个栗子：现在有一个数组<font color='#ffa200'>[1,2,3,4]</font>,我们想要生成一个新数组，要求新数组的每个元素都是之前数组元素的平方，下面分别用高阶和不使用高阶函数的方式实现。  
