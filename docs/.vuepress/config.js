@@ -2,6 +2,10 @@ module.exports = {
   title: 'wuweiwei\'s blog',
   description: 'my blog',
   port: '3000',
+  serviceWorker: true, // 是否开启 PWA
+  markdown: {
+    lineNumbers: true // 代码块显示行号
+  },
   head: [
     ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `/icons/favicon.ico` }]
  ],
@@ -14,7 +18,7 @@ module.exports = {
         items: [
           { text: 'HTML', link: '/html/' },
           { text: 'CSS', link: '/css/' },
-          { text: 'javaScript', link: '/js/' }
+          { text: 'javaScript', link: '/js/jc-one' }
         ]
       },
       {
@@ -32,8 +36,28 @@ module.exports = {
       { text: '关于', link: '/about/' },
       { text: 'Github', link: 'https://github.com' },
     ],
-    sidebarDepth: 4, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
+    sidebarDepth:4, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
     lastUpdated: 'Last Updated', // string | boolean
-    sidebar:'auto'
+    sidebar: {
+      '/js/': [
+        {
+          title: 'js基础', // 侧边栏名称
+          collapsable: true, // 可折叠
+          children: [
+            'jc-one', // 你的md文件地址
+          ]
+        },
+        {
+          title: 'js进阶', // 侧边栏名称
+          collapsable: true, // 可折叠
+          children: [
+            'jj-one', // 你的md文件地址
+            'jj-two', // 你的md文件地址
+            'jj-three', // 你的md文件地址
+            'jj-four', // 你的md文件地址
+          ]
+        }
+      ]
+    }
   } 
 }
