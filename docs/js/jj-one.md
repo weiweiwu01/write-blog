@@ -1,7 +1,7 @@
 ## js进阶-1 JavaScript高阶函数初探
 
 ### Highter-order function 高阶函数定义
-在JavaScript中，函数是一种特殊类型的对象--Function objects,是指至少满足下列条件之一的函数:
+在JavaScript中，函数是一种特殊类型的对象--Function objects,高阶函数是指至少满足下列条件之一的函数:
 + <font color='#ffa200'>函数可以作为参数被传递</font>
 + <font color='#ffa200'>函数可以作为返回值输出</font>  
 简单来说，高阶函数是一个接受函数作为参数传递或者函数作为返回值输出的函数。  
@@ -22,7 +22,7 @@ return 11;
  ### 函数作为参数传递
  JavaScript语言中内置了一些高阶函数，比如 <font color='#ffa200'>Array.prototype.map,Array.prototype.filter和Array.prototype.reduce</font>，它们接受一个函数作为参数，并应用这个函数到列表的每一个元素。
  #### Array.prototype.map  
- map()方法会创建一个**新数组**，其结果是该数组中的每个元素都调用一个**提供的函数**后返回的结果，**原始数组不会改变**。传递给map的回调函数（callback）接受三个参数，分别是currentValue、index(可选)、array（可选），除了callback之外还可以接受this值（可选），用于执行callback函数时使用的this值。  
+ map()方法会创建一个**新数组**，其结果是该数组中的每个元素都调用一个**提供的函数**后返回的结果，**原始数组不会改变**。传递给map的回调函数（callback）接受三个参数，分别是currentValue、index(可选)、array（可选），除了callback之外还可以接受this值（可选），用于执行callback函数时使用的this值。    
 举个栗子：现在有一个数组<font color='#ffa200'>[1,2,3,4]</font>,我们想要生成一个新数组，要求新数组的每个元素都是之前数组元素的平方，下面分别用高阶和不使用高阶函数的方式实现。  
 **不使用高阶函数**
 ```js
@@ -70,7 +70,7 @@ arr.map(Math.abs);//[1,2,3,4,5,6,7,8]
 ```
 都只需一行代码。
  #### Array.prototype.filter 
- <font color='#ffa200'>filter()</font>方法创建一个新数组，其包含通过提供函数实现的条件筛选的所有元素，**原始数组不会改变**。接受的参数和map是一样的，其返回值是一个新数组、由通过条件筛选的所有元素组成，如果没有任何数组元素通过测试，则返回空数组。
+ <font color='#ffa200'>filter()</font>方法创建一个新数组，其包含通过提供函数实现的条件筛选的所有元素，**原始数组不会改变**。接受的参数和map是一样的，其返回值是一个新数组、由通过条件筛选的所有元素组成，如果没有任何数组元素通过测试，则返回空数组。  
  举个栗子：现在有一个数组<font color='#ffa200'>[1,1,1,2,3,3,3,4,4,5,6,7,7,8,8,9]</font>,我们想要生成一个新数组，要求新数组的每个元素都不重复，即数组去重，下面分别用高阶和不使用高阶函数的方式实现。  
 **不使用高阶函数**
 ```js
@@ -100,7 +100,7 @@ console.log( arr1 );
  #### Array.prototype.reduce
  <font color='#ffa200'>reduce()</font>方法对数组中的每个元素执行一个提供的**reducer**函数(升序执行)，将其结果汇总为单个返回值。传递给reduce的回调函数（<font color='#ffa200'>callback</font>）接受四个参数，分别是累加器accumulator、currentValue、currentIndex（可选）、array（可选），除了<font color='#ffa200'>callback</font>之外还可以接受初始值 initialValue 值（可选）。
  + 如果没有提供 initialValue，那么第一次调用 <font color='#ffa200'>callback</font> 函数时，accumulator 使用原数组中的第一个元素，currentValue 即是数组中的第二个元素。 在没有初始值的空数组上调用 reduce 将报错。
- + 如果提供了 initialValue，那么将作为第一次调用 <font color='#ffa200'>callback</font> 函数时的第一个参数的值，即 accumulator，currentValue 使用原数组中的第一个元素。
+ + 如果提供了 initialValue，那么将作为第一次调用 <font color='#ffa200'>callback</font> 函数时的第一个参数的值，即 accumulator，currentValue 使用原数组中的第一个元素。  
  举个栗子：现在有一个数组<font color='#ffa200'>[0,1,2,3,4,5]</font>,需要计算数组元素的和，下面分别用高阶和不使用高阶函数的方式实现。 
  **不使用高阶函数**
  ```js
