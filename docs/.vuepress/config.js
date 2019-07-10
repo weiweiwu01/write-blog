@@ -45,6 +45,7 @@ module.exports = {
           collapsable: true, // 可折叠
           children: [
             'jc-one', // 你的md文件地址
+            'jc-two', 
           ]
         },
         {
@@ -52,12 +53,12 @@ module.exports = {
           collapsable: true, // 可折叠
           children: [
             'jj-one', // 你的md文件地址
-            'jj-two', // 你的md文件地址
-            'jj-three', // 你的md文件地址
-            'jj-four', // 你的md文件地址
+            'jj-two', 
+            'jj-three', 
+            'jj-four', 
           ]
         }
       ]
     }
-  } 
+  }
 }

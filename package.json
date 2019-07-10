@@ -22,5 +22,7 @@
   "bugs": {
     "url": "https://github.com/weiweiwu01/write-blog/issues"
   },
-  "homepage": "https://github.com/weiweiwu01/write-blog#readme"
+  "homepage": "https://github.com/weiweiwu01/write-blog#readme",
+  "devDependencies": {
+  }
 }
