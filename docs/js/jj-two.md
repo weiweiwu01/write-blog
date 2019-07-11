@@ -19,7 +19,32 @@ function curryingAdd(x) {
 add(1, 2)           // 3
 curryingAdd(1)(2)   // 3
 ```
-实际上就是把add函数的x,y两个参数变成了先用一个函数接受x，然后返回一个函数去处理y参数。   
+实际上就是把add函数的x,y两个参数变成了先用一个函数接受x，然后返回一个函数去处理y参数。     
+
+事实上，也可以创建参数收集函数，收集所有参数，统一进行计算
+```js
+function curry(a) {
+    let arg = [];//收集参数的容器 放到数组里面
+    arg.push(a)
+    function sum(b){//参数收集函数 利用闭包 保持arg在内存中
+        arg.push(b);//收集参数
+        return sum;//返回该收集参数函数
+    }
+    sum.toString = function(){//重写函数的toString方法 
+        let sum = arg.reduce((pre,cur)=>{//归并求和
+            return pre+cur
+        },0)
+        return sum;//返回求和的值
+    }
+    return sum;//第一次调用 返回sum函数
+}
+let sum1 = curry(1)(2)(3);
+let sum2 = curry(1)(2)(3)(4);
+let sum3 = curry(1)(2)(3)(4)(5)(6);
+console.log(sum1);
+console.log(sum2);
+console.log(sum3);
+``` 
 
 ### 柯里化的好处
 **1.参数复用**

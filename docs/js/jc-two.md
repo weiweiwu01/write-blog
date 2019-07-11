@@ -177,3 +177,6 @@ V8 博客还不时发布关于内存管理变化的文章。当然，为了学�
 [V8 内存分配与垃圾回收](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651552521&idx=2&sn=7d36614c2c0b6b617f1960593661bd7f&chksm=8025acc8b75225de8458f4643c92e266c9c2ae4938394a8eb65c497088e8a63ac4f50ef46a15&scene=21#wechat_redirect)  
 
 [浏览器渲染基本原理解析](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651556698&idx=1&sn=bf3b26e9bd7f572e10347c47676040c3&chksm=80255c9bb752d58d8b90f1c641b95519037b606c93ae995b41594c1e23b536829fd3a7fd4ca2&scene=21#wechat_redirect)  
+ 
+>作者：SHERlocked93   
+>https://segmentfault.com/a/1190000012960187
