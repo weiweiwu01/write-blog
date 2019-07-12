@@ -70,5 +70,36 @@ hasLetter('21212')      // false
 ```
 上面的示例是一个正则的校验，正常来说直接调用check函数就可以了，但是如果我有很多地方都要校验是否有数字，其实就是需要将第一个参数reg进行复用，这样别的地方就能够直接调用hasNumber，hasLetter等函数，让参数能够复用，调用起来也更方便。
 
+**2.延迟运行**
+bind方法不是立即执行函数，延迟执行   
+>bind() 方法会创建一个新函数。当这个新函数被调用时，bind() 的第一个参数将作为它运行时的 this，之后的一序列参数将会在传递的实参前传入作为它的参数。(来自于 MDN )    
+由此我们可以首先得出 bind 函数的两个特点：
++ 返回一个函数
++ 可以传入参数
+
+javaScript中bind的实现   
+call、apply的实现，[请点击这里](https://weiweiwu01.github.io/js/jc-three.html)
+```js
+Function.prototype._bind = function(context){
+    if (typeof this !== "function") {
+        throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
+    }
+    let self = this;
+    const args = [...arguments].splice(1);
+    return function(){
+        let bindArgs = [...arguments];
+        self.apply(context, args.concat(bindArgs));
+    }
+}
+ let obj = {
+     name:"John"
+ }
+ function test(num,school){
+     console.log('我的名字叫'+this.name+",我今年高考考了"+num+"分,被"+school+'录取')
+ }
+let ts = test._bind(obj,745,'北京大学')
+ts()
+```
+
 等待更新中......
 
