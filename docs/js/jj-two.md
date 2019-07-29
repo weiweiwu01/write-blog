@@ -135,6 +135,50 @@ let addEvent = (function(){
     }
 })()
 ```
-这样写，提前确定了会走哪一个方法，避免每次都进行判断。
+这样写，提前确定了会走哪一个方法，避免每次都进行判断。   
+### 利用call/apply封装数组的map方法   
+>map():对数组的每一项给定函数，返回每次函数调用的结果组成的数组。  
+通俗的来说，就是遍历数组的每一项元素，并且在map的第一个参数（回调函数）中进行运算处理，并返回计算结果，返回一个由所有计算结果组成的新数组。
+```js
+//回调函数中有三个参数   
+//第一个参数表示newArr的每一项，第二个参数表示该项在数组中的索引值  
+//第三个表示数组本身    
+//除此之外，回调函数中的this，当map不存在第二个参数时，this指向丢失，当存在第二个参数时，指向该参数所设定的对象   
+ 
+const newArr = [1,2,3,4].map(function(item,i,arr){
+    console.log(item,i,arr,this)
+    return item*2
+},{a:1})
+console.log(newArr)
+
+//1 0 (4) [1, 2, 3, 4] {a: 1}
+//2 1 (4) [1, 2, 3, 4] {a: 1}
+//3 2 (4) [1, 2, 3, 4] {a: 1}
+// 4 3 (4) [1, 2, 3, 4] {a: 1}
+//  [2, 4, 6, 8]
+```
+下面进行map方法的封装，让函数成为map方法的第一个参数
+```js
+Array.prototype._map = function(fn,context){
+    const temp = []
+    if(typeof fn == 'function'){
+        for(let i=0;i<this.length;i++){
+            temp.push(fn.call(context,this[i],i,this))
+        }
+    }else{
+        console.error('TypeError:'+fn+'is not a function.')
+    }
+    return temp;
+}
+
+const newArr = [1, 2, 3, 4]._map(function(item) {
+    return item + 1;
+})
+ 
+console.log(newArr)
+
+//[2,3,4,5]
+```
+
 等待更新中......
 
