@@ -100,6 +100,41 @@ Function.prototype._bind = function(context){
 let ts = test._bind(obj,745,'北京大学')
 ts()
 ```
-
+**3.提前返回**  
+举个栗子：封装一个元素绑定事件监听器
+```js
+let addEvent = function(el,type,fn,capture){
+    if(window.addEventListener){
+        el.addEventListener(type,function(e){
+            fn.call(el,e)
+        },capture)
+    }else if(window.attachEvent){
+        el.attachEvent('on'+type,function(e){
+            fn.call(el,e)
+        })
+    }
+}
+```
+以上代码是为了兼容IE浏览器对DOM事件绑定做的函数封装。  
+这样写的问题是：每次对DOM元素进行事件绑定时，函数内部都会走一遍if else。  
+那么用函数柯里化，就可以实现提前返回：  
+```js
+let addEvent = (function(){
+    if(window.addEventListener){
+        return function(el,type,fn,capture){
+            el.addEventListener(type,function(e){
+                fn.call(el,e)
+            },capture)
+        }
+    }else if(window.attachEvent){
+        return function(el,type,fn,capture){
+            el.attachEvent('on'+type,function(e){
+                fn.call(el,e)
+            })
+        }
+    }
+})()
+```
+这样写，提前确定了会走哪一个方法，避免每次都进行判断。
 等待更新中......
 
