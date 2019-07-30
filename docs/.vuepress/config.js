@@ -47,6 +47,7 @@ module.exports = {
             'jc-one', // 你的md文件地址
             'jc-two', 
             'jc-three', 
+            'jc-four', 
           ]
         },
         {
