@@ -24,7 +24,7 @@ module.exports = {
       {
         text: '框架',
         items: [
-          { text: 'Vue', link: '/vue/' },
+          { text: 'Vue', link: '/vue/vue-base' },
           { text: 'React', link: '/react/' },
           { text: 'Angular', link: '/angular/' },
           { text: 'Flutter', link: '/flutter/' },
@@ -58,6 +58,23 @@ module.exports = {
             'jj-two', 
             'jj-three', 
             'jj-four', 
+          ]
+        }
+      ],
+      '/vue/':[
+        {
+          title:"vue基础",
+          collapsable: true, // 可折叠
+          children: [
+            'vue-base'
+          ]
+        },
+        {
+          title:"vue源码",
+          collapsable: true, // 可折叠
+          children: [
+            'vue-use',
+            'vue-router',
           ]
         }
       ]

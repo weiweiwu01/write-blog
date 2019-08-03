@@ -18,6 +18,9 @@ function curryingAdd(x) {
 }
 add(1, 2)           // 3
 curryingAdd(1)(2)   // 3
+//箭头函数柯里化
+let c = x => y => x+y;
+c(1)(2) //3
 ```
 实际上就是把add函数的x,y两个参数变成了先用一个函数接受x，然后返回一个函数去处理y参数。     
 
