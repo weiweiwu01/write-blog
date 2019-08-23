@@ -138,7 +138,28 @@ let addEvent = (function(){
     }
 })()
 ```
-这样写，提前确定了会走哪一个方法，避免每次都进行判断。   
+这样写，提前确定了会走哪一个方法，避免每次都进行判断。 
+### 通用柯里化函数的封装
+```js
+const curring = (fn,arr=[]) =>{ 
+    let len = fn.length;//函数的长度 就是参数的个数
+    return (...args) => {
+        arr.concat(args) //收集参数 存放数组里
+        if(arr.length < len){ //判断收集的数组长度 是否小于参数的长度
+            return curring(fn,arr)//如果小于继续执行curring函数  递归 收集参数  当前参数为fn arr
+        }
+        return fn(...arr) //否则 执行传入的fn函数
+    }
+}
+
+const add = (a,b,c,d,e) => {
+    return a+b+c+d+e
+}
+
+let r = curring(add)(1)(2)(3)(4,6)
+console.log(r) //16
+```
+
 ### 利用call/apply封装数组的map方法   
 >map():对数组的每一项给定函数，返回每次函数调用的结果组成的数组。  
 通俗的来说，就是遍历数组的每一项元素，并且在map的第一个参数（回调函数）中进行运算处理，并返回计算结果，返回一个由所有计算结果组成的新数组。

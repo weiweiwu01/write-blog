@@ -66,7 +66,7 @@ module.exports = {
           title:"vue基础",
           collapsable: true, // 可折叠
           children: [
-            'vue-base'
+            'vue-base',
           ]
         },
         {
@@ -76,7 +76,14 @@ module.exports = {
             'vue-use',
             'vue-router',
           ]
-        }
+        },
+        {
+          title:"vue 项目性能优化",
+          collapsable: true, // 可折叠
+          children: [
+            'vue-optimization'
+          ]
+        },
       ]
     }
   }

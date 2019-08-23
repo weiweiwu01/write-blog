@@ -23,6 +23,9 @@
     "url": "https://github.com/weiweiwu01/write-blog/issues"
   },
   "homepage": "https://github.com/weiweiwu01/write-blog#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "cnpm": "^6.1.0",
+    "vuepress": "^1.0.3"
   }
 }
