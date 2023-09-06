@@ -1,4 +1,4 @@
-### js中new 的过程与实现
+### js中new的过程与实现
 
 ```js
 function myNew(obj,...arg) {
