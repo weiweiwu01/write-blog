@@ -2,7 +2,7 @@
 <template>
     <div>
         vuepress搭建个人博客
-        <p>啦啦啦</p>
+        <p class="linkme">联系我：vivi_www2023@163.com</p>
     </div>
 </template>
 
@@ -13,6 +13,9 @@ export default {
 </script>
 
 <style>
+    .linkme {
+        color: #475ec6;
+    }
 
 </style>
 
