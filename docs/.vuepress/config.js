@@ -85,6 +85,15 @@ module.exports = {
             'vue-optimization'
           ]
         },
+      ],
+      '/interview/':[
+        {
+          title: '算法', // 侧边栏名称
+          collapsable: true, // 可折叠
+          children: [
+            'sf-one', // 你的md文件地址
+          ]
+        },
       ]
     }
   }
