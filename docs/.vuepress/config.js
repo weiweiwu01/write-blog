@@ -94,6 +94,15 @@ module.exports = {
             'sf-one', // 你的md文件地址
           ]
         },
+      ],
+      '/css/':[
+        {
+          title: '基础', // 侧边栏名称
+          collapsable: true, // 可折叠
+          children: [
+            'BFC', // 你的md文件地址
+          ]
+        },
       ]
     }
   }
