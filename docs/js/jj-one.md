@@ -1,4 +1,4 @@
-## js进阶-1 JavaScript高阶函数初探
+# JavaScript高阶函数初探
 
 ### Highter-order function 高阶函数定义
 在JavaScript中，函数是一种特殊类型的对象--Function objects,高阶函数是指至少满足下列条件之一的函数:

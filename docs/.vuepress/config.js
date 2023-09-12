@@ -17,14 +17,14 @@ module.exports = {
         text: '基础',
         items: [
           { text: 'HTML', link: '/html/' },
-          { text: 'CSS', link: '/css/' },
-          { text: 'javaScript', link: '/js/jc-one' }
+          { text: 'CSS', link: '/css/bfc' },
+          { text: 'JavaScript', link: '/js/jc-one' }
         ]
       },
       {
         text: '框架',
         items: [
-          { text: 'Vue', link: '/vue/vue-base' },
+          { text: 'Vue', link: '/vue/vue-use' },
           { text: 'React', link: '/react/' },
           { text: 'Angular', link: '/angular/' },
           { text: 'Flutter', link: '/flutter/' },
@@ -32,7 +32,7 @@ module.exports = {
       },
       { text: '工作笔记', link: '/workNotes/' },
       { text: '前端可视化', link: '/web/' },
-      { text: '面试', link: '/interview/' },
+      { text: '面试', link: '/interview/sf-one' },
       { text: '关于', link: '/about/' },
       { text: 'Github', link: 'https://github.com' },
     ],
@@ -49,16 +49,12 @@ module.exports = {
             'jc-three', 
             'jc-four', 
             'jc-five', 
-          ]
-        },
-        {
-          title: 'js进阶', // 侧边栏名称
-          collapsable: true, // 可折叠
-          children: [
             'jj-one', // 你的md文件地址
             'jj-two', 
             'jj-three', 
             'jj-four', 
+            'jj-five', 
+            'jj-six', 
           ]
         }
       ],
