@@ -55,6 +55,7 @@ module.exports = {
             'jj-four', 
             'jj-five', 
             'jj-six', 
+            'jj-seven', 
           ]
         }
       ],
