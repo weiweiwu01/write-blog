@@ -30,9 +30,9 @@ module.exports = {
           { text: 'Flutter', link: '/flutter/' },
         ]
       },
+      { text: '面试', link: '/interview/sf-one' },
       { text: '工作笔记', link: '/workNotes/' },
       { text: '前端可视化', link: '/web/' },
-      { text: '面试', link: '/interview/sf-one' },
       { text: '关于', link: '/about/' },
       { text: 'Github', link: 'https://github.com' },
     ],
@@ -89,6 +89,15 @@ module.exports = {
           collapsable: true, // 可折叠
           children: [
             'sf-one', // 你的md文件地址
+          ]
+        },
+        {
+          title: '网络', // 侧边栏名称
+          collapsable: true, // 可折叠
+          children: [
+            'wl-one', // 你的md文件地址
+            'wl-two',
+            'wl-three',
           ]
         },
       ],
