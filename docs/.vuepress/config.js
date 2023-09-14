@@ -16,16 +16,16 @@ module.exports = {
       {
         text: '基础',
         items: [
-          { text: 'HTML', link: '/html/' },
+          { text: 'JavaScript', link: '/js/jc-one' },
           { text: 'CSS', link: '/css/bfc' },
-          { text: 'JavaScript', link: '/js/jc-one' }
+          { text: 'HTML', link: '/html/' },
         ]
       },
       {
         text: '框架',
         items: [
           { text: 'Vue', link: '/vue/vue-use' },
-          { text: 'React', link: '/react/' },
+          { text: 'React', link: '/react/react2' },
           { text: 'Angular', link: '/angular/' },
           { text: 'Flutter', link: '/flutter/' },
         ]
@@ -41,8 +41,8 @@ module.exports = {
     sidebar: {
       '/js/': [
         {
-          title: 'js基础', // 侧边栏名称
-          collapsable: true, // 可折叠
+          // title: 'js基础', // 侧边栏名称
+          collapsable: false, // 可折叠
           children: [
             'jc-one', // 你的md文件地址
             'jc-two', 
@@ -98,6 +98,15 @@ module.exports = {
           collapsable: true, // 可折叠
           children: [
             'BFC', // 你的md文件地址
+          ]
+        },
+      ],
+      '/react/':[
+        {
+          collapsable: false, // 可折叠
+          children: [
+            'react1', // 你的md文件地址
+            'react2',
           ]
         },
       ]

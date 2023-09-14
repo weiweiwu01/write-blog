@@ -1,4 +1,4 @@
-### js中call、apply的基本实现  
+### call、apply的基本实现  
 
 **call**
 + 改变this指向
