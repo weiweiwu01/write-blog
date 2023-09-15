@@ -17,14 +17,14 @@ module.exports = {
         text: '基础',
         items: [
           { text: 'JavaScript', link: '/js/jc-one' },
-          { text: 'CSS', link: '/css/bfc' },
+          { text: 'CSS', link: '/css/BFC' },
           { text: 'HTML', link: '/html/' },
         ]
       },
       {
         text: '框架',
         items: [
-          { text: 'Vue', link: '/vue/vue-use' },
+          { text: 'Vue', link: '/vue/diff' },
           { text: 'React', link: '/react/react2' },
           { text: 'Angular', link: '/angular/' },
           { text: 'Flutter', link: '/flutter/' },
@@ -73,6 +73,7 @@ module.exports = {
           children: [
             'vue-use',
             'vue-router',
+            'diff',
           ]
         },
         {
@@ -89,6 +90,7 @@ module.exports = {
           collapsable: true, // 可折叠
           children: [
             'sf-one', // 你的md文件地址
+            'sf-two',
           ]
         },
         {
@@ -104,7 +106,7 @@ module.exports = {
       '/css/':[
         {
           title: '基础', // 侧边栏名称
-          collapsable: true, // 可折叠
+          collapsable: false, // 可折叠
           children: [
             'BFC', // 你的md文件地址
           ]
