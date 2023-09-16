@@ -91,6 +91,9 @@ module.exports = {
           children: [
             'sf-one', // 你的md文件地址
             'sf-two',
+            'sf-three',
+            'sf-four',
+            'sf-five',
           ]
         },
         {
