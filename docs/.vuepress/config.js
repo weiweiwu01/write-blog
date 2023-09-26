@@ -49,7 +49,7 @@ module.exports = {
             'jc-three', 
             'jc-four', 
             'jc-five', 
-            'jj-one', // 你的md文件地址
+            'jj-one', 
             'jj-two', 
             'jj-three', 
             'jj-four', 
@@ -95,6 +95,7 @@ module.exports = {
             'sf-three',
             'sf-four',
             'sf-five',
+            'sf-six',
           ]
         },
         {
